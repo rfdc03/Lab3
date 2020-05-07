@@ -17,7 +17,18 @@ public class Congreso {
     private Date fecha_inicio;
     private Date fecha_fin;
     private String pais;
-    private int activo;
+    private boolean activo;
+
+    public Congreso(){
+        
+    }
+    public Congreso(String nombre, Date fecha_inicio, Date fecha_fin, String pais, boolean activo) {
+        this.nombre = nombre;
+        this.fecha_inicio = fecha_inicio;
+        this.fecha_fin = fecha_fin;
+        this.pais = pais;
+        this.activo = activo;
+    }
 
     public int getId() {
         return id;
@@ -57,6 +68,14 @@ public class Congreso {
 
     public void setPais(String pais) {
         this.pais = pais;
+    }
+
+    public boolean getActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
     }
     
     
