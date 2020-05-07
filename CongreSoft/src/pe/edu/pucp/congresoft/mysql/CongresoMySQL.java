@@ -32,7 +32,7 @@ public class CongresoMySQL implements CongresoDAO {
             Connection con = DriverManager.getConnection("jdbc:mysql://"+
                     "lp2mysql.cdjj2wtonimd.us-east-1.rds.amazonaws.com"+
                     ":3306/inf282", "admin", "abcd1234");
-            String sentencia = "SELECT * FROM EMPLEADO";
+            String sentencia = "SELECT * FROM CONGRESO";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sentencia);
             while(rs.next()){
@@ -41,9 +41,7 @@ public class CongresoMySQL implements CongresoDAO {
                 congreso.setNombre(rs.getString("NOMBRE"));
                 congreso.setPais(rs.getString("PAIS"));
                 congreso.setFecha_inicio(rs.getDate("FECHA_INICIO"));
-                congreso.setFecha_fin(rs.getDate("FECHA_FIN"));
-                
-            
+                congreso.setFecha_fin(rs.getDate("FECHA_FIN"));            
             }
             con.close();
         }

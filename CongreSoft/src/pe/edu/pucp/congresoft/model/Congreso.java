@@ -59,4 +59,11 @@ public class Congreso {
         this.pais = pais;
     }
     
+    
+    public String mostrarDatos(){
+        return id + " - " + nombre + 
+                " - " + fecha_inicio + 
+                " - " + fecha_fin + 
+                " - " + pais + "\n";
+    }
 }
