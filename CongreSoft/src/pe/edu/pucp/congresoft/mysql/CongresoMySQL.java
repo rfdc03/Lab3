@@ -34,7 +34,7 @@ public class CongresoMySQL implements CongresoDAO {
             ps.setString(1,congreso.getNombre());
             ps.setDate(2,new java.sql.Date(congreso.getFecha_inicio().getTime()));
             ps.setDate(3,new java.sql.Date(congreso.getFecha_fin().getTime()));
-            ps.setString(4,congreso.getNombre());
+            ps.setString(4,congreso.getPais());
             ps.setBoolean(5,congreso.getActivo());
             
             resultado = ps.executeUpdate();
